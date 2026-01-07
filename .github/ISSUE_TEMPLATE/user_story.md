@@ -1,3 +1,11 @@
+---
+name: User Story
+about: This template defines a user story for the project
+title: "[User Story]: "
+labels: enhancement
+assignees: ''
+---
+
 **As a** [role]  
 **I need** [function]  
 **So that** [benefit]  
