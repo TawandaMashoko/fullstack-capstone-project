@@ -1,5 +1,7 @@
+/* jshint esversion: 8 */
+
 require('dotenv').config();
-const MongoClient = require('mongodb').MongoClient;
+const { MongoClient } = require('mongodb');
 const fs = require('fs');
 
 // MongoDB connection URL
@@ -31,7 +33,6 @@ async function loadData() {
         // Insert data into the collection
         const insertResult = await collection.insertMany(data);
         console.log(`🎁 Inserted documents: ${insertResult.insertedCount}`);
-
     } catch (err) {
         console.error("❌ Error loading data:", err);
     } finally {
@@ -45,5 +46,5 @@ async function loadData() {
 loadData();
 
 module.exports = {
-    loadData,
+    loadData
 };
